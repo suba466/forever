@@ -200,8 +200,7 @@ const App = () => {
                         <button onClick={nextSlide} className="nav-btn main-nav">❯</button>
                     </div>
 
-                    <p className="slide-counter">{currentIndex + 1} / {slides.length}</p>
-                    <button className="btn-primary" onClick={() => { setAccepted(false); setCurrentIndex(0); }}>Back</button>
+                   
                 </div>
             </div>
         );
