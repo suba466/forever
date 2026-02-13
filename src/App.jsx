@@ -17,6 +17,7 @@ const App = () => {
     const [hearts, setHearts] = useState([]);
     const [surpriseHearts, setSurpriseHearts] = useState([]);
     const [noButtonText, setNoButtonText] = useState("No");
+    const [finalNoButtonText, setFinalNoButtonText] = useState("No");
     const [finalAccepted, setFinalAccepted] = useState(false);
 
     // Combined Carousel index
@@ -182,12 +183,12 @@ const App = () => {
                                                 </button>
                                                 <button
                                                     className="btn-secondary"
-                                                    onMouseEnter={handleNoHover}
-                                                    onMouseLeave={() => setNoButtonText("No")}
-                                                    onTouchStart={handleNoHover}
+                                                    onMouseEnter={() => setFinalNoButtonText("Yes")}
+                                                    onMouseLeave={() => setFinalNoButtonText("No")}
+                                                    onTouchStart={() => setFinalNoButtonText("Yes")}
                                                     onClick={() => setFinalAccepted(true)}
                                                 >
-                                                    {noButtonText}
+                                                    {finalNoButtonText}
                                                 </button>
                                             </div>
                                         )}
@@ -201,8 +202,6 @@ const App = () => {
 
                         <button onClick={nextSlide} className="nav-btn main-nav">❯</button>
                     </div>
-
-
                 </div>
             </div>
         );
