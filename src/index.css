@@ -187,8 +187,9 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: flex-start;
+  /* Start from top to allow scrolling */
+  padding: 4rem 2rem;
   text-align: center;
   gap: 1.5rem;
   overflow-y: auto;
@@ -699,36 +700,38 @@ h4 {
 
   /* Carousel Mobile Fixes */
   .main-carousel {
-    padding-top: 2rem;
+    padding-top: 5rem;
     gap: 0;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
+    /* Reduced height to leave room for buttons below */
     padding: 0;
+    margin-bottom: 2rem;
   }
 
   .nav-btn.main-nav {
     position: absolute;
-    top: 50%;
+    top: 35vh;
+    /* Center on the carousel height */
     transform: translateY(-50%);
     z-index: 50;
     background: rgba(255, 77, 109, 0.6);
-    /* Semi-transparent */
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 
   .nav-btn.main-nav:first-child {
-    left: 10px;
+    left: 5px;
   }
 
   .nav-btn.main-nav:last-of-type {
-    right: 10px;
+    right: 5px;
   }
 
   .carousel-view-full {
     width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
+    height: 70vh;
+    max-height: 70vh;
     border-radius: 0;
     background: transparent;
     backdrop-filter: none;
@@ -739,26 +742,27 @@ h4 {
     border-radius: 0;
     box-shadow: none;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     object-fit: cover;
-    /* Back to cover for full screen mobile feel */
   }
 
   .letter-card-view {
-    padding: 2rem;
-    justify-content: center;
-    height: 100vh;
+    padding: 2rem 1.5rem;
+    justify-content: flex-start;
+    height: 100%;
     background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    /* No bg/blur as per previous request */
   }
 
   .letter-text-large {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 0 15px;
     color: var(--primary-dark);
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    /* Better legibility */
+    padding-bottom: 3rem;
+    /* Extra padding at bottom to ensure last line is visible */
   }
 
   .slide-counter {
@@ -767,6 +771,12 @@ h4 {
     left: 50%;
     transform: translateX(-50%);
     z-index: 50;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .surprise-content>.btn-primary {
+    margin-bottom: 2rem;
   }
 }
 
