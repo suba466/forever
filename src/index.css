@@ -193,6 +193,7 @@ h4 {
   -webkit-backdrop-filter: blur(10px);
   text-align: center;
   gap: 2rem;
+  overflow-y: auto;
 }
 
 .final-buttons {
@@ -240,7 +241,7 @@ h4 {
 .composite-photo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-   gap: 2px;
+  gap: 2px;
   background: #eee;
   border: 4px solid #fff;
   position: relative;
@@ -286,10 +287,12 @@ h4 {
 
 .letter-text-large {
   font-family: 'Pacifico', cursive;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: var(--primary-dark);
-  line-height: 1.5;
+  line-height: 1.6;
   animation: slideUp 0.6s ease;
+  white-space: pre-wrap;
+  padding: 1rem 0;
 }
 
 .caption-overlay {
@@ -694,6 +697,34 @@ h4 {
     font-size: 1rem;
     flex: 1;
     min-width: 0;
+  }
+
+  /* Carousel Mobile Fixes */
+  .main-carousel {
+    padding-top: 5rem;
+    gap: 0.5rem;
+  }
+
+  .carousel-view-full {
+    width: 95vw;
+    height: 75vh;
+    max-height: 75vh;
+    border-radius: 1.5rem;
+  }
+
+  .letter-card-view {
+    padding: 2rem 1.5rem;
+    justify-content: flex-start;
+    /* Start from top on mobile to allow scrolling */
+  }
+
+  .letter-text-large {
+    font-size: 1.1rem;
+  }
+
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
   }
 }
 
