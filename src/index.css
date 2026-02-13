@@ -240,8 +240,7 @@ h4 {
 .composite-photo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2px;
+   gap: 2px;
   background: #eee;
   border: 4px solid #fff;
   position: relative;
