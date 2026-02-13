@@ -176,6 +176,7 @@ const App = () => {
                                                 <button
                                                     className="btn-primary"
                                                     onClick={() => setFinalAccepted(true)}
+                                                    onTouchStart={() => setFinalAccepted(true)}
                                                 >
                                                     Yes
                                                 </button>
@@ -183,6 +184,7 @@ const App = () => {
                                                     className="btn-secondary"
                                                     onMouseEnter={handleNoHover}
                                                     onMouseLeave={() => setNoButtonText("No")}
+                                                    onTouchStart={handleNoHover}
                                                     onClick={() => setFinalAccepted(true)}
                                                 >
                                                     {noButtonText}
@@ -200,7 +202,7 @@ const App = () => {
                         <button onClick={nextSlide} className="nav-btn main-nav">❯</button>
                     </div>
 
-                   
+
                 </div>
             </div>
         );
@@ -235,6 +237,7 @@ const App = () => {
                     <button
                         className="btn-primary"
                         onClick={() => setAccepted(true)}
+                        onTouchStart={() => setAccepted(true)}
                     >
                         Yes
                     </button>
@@ -242,6 +245,7 @@ const App = () => {
                         className="btn-secondary"
                         onMouseEnter={handleNoHover}
                         onMouseLeave={() => setNoButtonText("No")}
+                        onTouchStart={handleNoHover}
                         onClick={() => setAccepted(true)}
                     >
                         {noButtonText}
