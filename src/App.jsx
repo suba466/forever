@@ -127,8 +127,6 @@ const App = () => {
                     <div className="unified-collage-frame">
                         <div className="composite-photo">
                             <img src={hugImg} alt="Hug" className="composite-img top-left" />
-                            <img src={mallImg} alt="Mall" className="composite-img top-right" />
-                            <img src={annapoornaImg} alt="Annapoorna" className="composite-img bottom-left" />
                             <img src={animeImg} alt="Anime" className="composite-img bottom-right" />
                             <div className="composite-heart-overlay">❤️</div>
                         </div>
