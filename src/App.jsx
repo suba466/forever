@@ -7,6 +7,10 @@ import heartImg from './assets/heart.jpeg';
 import kissImg from './assets/kiss.jpeg';
 import redLipsImg from './assets/red lips.jpeg';
 import selfieImg from './assets/selfie.jpeg';
+import hugImg from './assets/hug.jpeg';
+import mallImg from './assets/mall.jpeg';
+import annapoornaImg from './assets/annapoorna.jpeg';
+import animeImg from './assets/anime.jpeg';
 
 const App = () => {
     const [accepted, setAccepted] = useState(false);
@@ -120,12 +124,15 @@ const App = () => {
                 </div>
                 <div className="final-content">
 
-                    <div className="hug-container">
-                        <img
-                            src="https://media.giphy.com/media/l2QDM9Jnim1YVILXW/giphy.gif"
-                            alt="Hugging"
-                            className="hug-gif"
-                        />
+                    <div className="unified-collage-frame">
+                        <div className="composite-photo">
+                            <img src={hugImg} alt="Hug" className="composite-img top-left" />
+                            <img src={mallImg} alt="Mall" className="composite-img top-right" />
+                            <img src={annapoornaImg} alt="Annapoorna" className="composite-img bottom-left" />
+                            <img src={animeImg} alt="Anime" className="composite-img bottom-right" />
+                            <div className="composite-heart-overlay">❤️</div>
+                        </div>
+                        <p className="composite-caption">Building Our Forever... ✨</p>
                     </div>
                     <button className="btn-primary" onClick={() => { setFinalAccepted(false); setAccepted(false); setCurrentIndex(0); }}>Restart ❤️</button>
                 </div>
